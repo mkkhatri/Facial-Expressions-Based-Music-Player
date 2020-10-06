@@ -1,0 +1,471 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Emotion Based Music Player</title>
+
+  <!-- Bootstrap core CSS -->
+
+  <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="styles.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+  <!-- Custom styles for this template -->
+  <link href="business-casual.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link 
+  rel="stylesheet" 
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+  crossorigin="anonymous"
+/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+</head>
+<style type="text/css">
+  /*!
+ * Start Bootstrap - Business Casual v5.0.10 (https://startbootstrap.com/themes/business-casual)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-casual/blob/master/LICENSE)
+ */
+ html
+{
+  scroll-behavior: smooth;
+}
+ body{
+  font-family:Lora;
+  background-image:linear-gradient(rgba(47,23,15,.65),
+  rgba(47,23,15,.65)),
+  url(bg.jpg);
+  background-attachment:fixed;
+  background-position:center;
+  background-size:cover;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  }
+.clearfix{zoom:1}
+.clearfix:after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+  h1,h2,h3,h4,h5,h6
+  {
+    font-family:Raleway
+  }
+  @media only screen and (min-width: 1200px) {
+section
+  {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+    @media only screen and (min-width: 1079px) {
+section
+  {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+    @media only screen and (min-width: 970px) {
+section
+  {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+    @media only screen and (min-width: 892px) {
+section
+  {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+   
+  section:before
+  {
+    color: #262626;
+  }
+  p
+  {
+    line-height:1.75
+  }
+  .text-faded
+  {
+    color:rgba(255,255,255,.3)
+  }
+  .site-heading
+  {
+    margin-top:0;
+
+   /* margin-top:5rem;*/
+    margin-bottom:5rem;
+    text-transform:uppercase;
+    line-height:1;
+    font-family:Raleway
+  }
+  .site-heading .site-heading-upper
+  {
+    display:block;
+    font-size:2rem;
+    font-weight:800
+  }
+  .site-heading .site-heading-lower
+  {
+    font-size:5rem;
+    font-weight:100;
+    line-height:4rem
+  }
+  .page-section
+  {
+    margin-top:0;
+  }
+  .section-heading
+  {
+    text-transform:uppercase
+  }
+  .section-heading .section-heading-upper
+  {
+    display:block;
+    font-size:1rem;
+    font-weight:800
+  }
+  .section-heading .section-heading-lower
+  {
+    display:block;
+    font-size:3rem;
+    font-weight:100
+  }
+  .bg-faded
+  {
+    background-color:rgba(255,255,255,.85)
+  } 
+  #mainNav
+  {
+    background-color:rgba(47,23,15,.9);
+    font-family:Raleway;
+    position: fixed;
+    margin-top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+  #mainNav .navbar-brand
+  {
+    color:#e6a756
+  }
+  #mainNav .navbar-nav .nav-item .nav-link
+  {
+    color:rgba(255,255,255,.7);
+    font-weight:800
+  }
+  #mainNav .navbar-nav .nav-item.active .nav-link
+  {
+    color:#e6a756
+  }
+  @media (min-width:992px)
+  {
+    #mainNav .navbar-nav .nav-item .nav-link
+    {
+      font-size:.9rem
+    }
+    #mainNav .navbar-nav .nav-item .nav-link:hover
+    {
+      color:rgba(255,255,255,.4)
+    }
+    #mainNav .navbar-nav .nav-item.active .nav-link:hover
+    {
+      color:#e6a756
+    }
+  }
+  .btn-xl
+  {
+    font-weight:700;
+    font-size:.8rem;
+    padding-top:1.5rem;
+    padding-bottom:1.5rem;
+    padding-left:2rem;
+    padding-right:2rem
+  }
+  .intro
+  {
+    position:relative
+  }
+  @media (min-width:992px)
+  {
+    .intro .intro-img
+    {
+      width:75%;
+      float:right
+    }
+    .intro .intro-text
+    {
+      left:0;
+      width:60%;
+      margin-top:3rem;
+      position:absolute
+    }
+    .intro .intro-text .intro-button
+    {
+      width:100%;
+      left:0;
+      position:absolute;
+      bottom:-2rem
+    }
+  }
+  @media (min-width:1200px)
+  {
+    .intro .intro-text
+    {
+      width:45%
+    }
+  }
+  .cta
+  {
+    padding-top:5rem;
+    padding-bottom:5rem;
+    background-color:rgba(230,167,86,.9)
+  }
+  .cta .cta-inner
+  {
+    position:relative;
+    padding:3rem;
+    margin:.5rem;
+    background-color:rgba(255,255,255,.85)
+  }
+  .cta .cta-inner:before
+  {
+    border-radius:.5rem;
+    content:'';
+    position:absolute;
+    top:-.5rem;
+    bottom:-.5rem;
+    left:-.5rem;
+    right:-.5rem;
+    border:.25rem solid rgba(255,255,255,.85);
+    z-index:-1
+  }
+  
+  .footer
+  {
+    background-color:rgba(47,23,15,.9)
+  }
+  .text-primary
+  {
+    color:#e6a756!important
+  }
+  .bg-primary
+  {
+    background-color:#e6a756!important
+  }
+  .btn
+  {
+    box-shadow:0 3px 3px 0 rgba(33,37,41,.1)
+  }
+  .btn-primary
+  {
+    background-color:#e6a756;
+    border-color:#e6a756
+  }
+  .btn-primary:active,.btn-primary:focus,.btn-primary:hover
+  {
+    background-color:#df902a;
+    border-color:#df902a
+  }
+  .font-weight-light
+  {
+    font-weight:100!important
+  }
+  section
+{
+    padding: 80px 0;
+}
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #81c644;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper{
+  margin-top: 10%;
+}
+
+.wrapper h1{
+  font-family: 'Allura', cursive;
+  font-size: 52px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.team{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.team .team_member{
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8b8b;  
+  position: relative;
+}
+
+.team .team_member h3{
+  color: #81c644;
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+.team .team_member p.role{
+  color: rgb(204, 204, 204);
+  margin: 12px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.team .team_member .team_img{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.team .team_member .team_img img{
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+
+</style>
+<body>
+  
+  <!-- Navigation -->
+  <header>
+   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4 clearfix" id="mainNav" >
+    <div class="container">
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Emotionbase Music Player</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="#sec2">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+  <section id="sec1" class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'intro.jpg'%}"/>
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <p class="mb-3">Music gives a soul to the universe, wings to the mind, flight to the imagination, and life to everything."<br> - Plato</p>
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">Music is an outburst of the soul</span><br>
+            <span class="section-heading-lower" style="font-size:x-large;">Click below to detect your face and then Enter</span>
+          </h2>
+          <div class="intro-button mx-auto">
+            <a class="btn btn-primary btn-xl" href="/external/">Detect your expression</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section  id="sec2" class="page-section cta clearfix">
+    <div class="wrapper">
+  <h1 style="margin-top: -120px;">About Us</h1>
+  <div class="team">
+    <div class="team_member" style="width: 600px; ">
+      <div class="team_img1">
+        </div>
+      <h1>About Project</h1>
+      <p>The project is the Facial Expression based Music player system made in Django with machine learning libraries like OpenCV and TensorFlow. Here the user has to detect their facial expressions through webcam and the songs recommended list will be displayed. Also user can make his own custom songs playlist for his convenience. This web app is highly beneficial as all things are done automatically using machine learning concepts. </p>
+    </div>
+
+    <div class="team_member">
+      <div class="team_img">
+        <img src="{% static 'nidhish.png'%}" alt="Team_image">
+      </div>
+      <h3>Nidhish Gandhi</h3>
+      <p class="role">Back-end developer</p>
+      <p>Contact us : 8200298826<br>gnidhishji3256@gmail.com</p>
+    </div>
+    
+    <div class="team_member">
+      <div class="team_img">
+        <img src="{% static 'mansi.png'%}" alt="Team_image">
+      </div>
+      <h3>Mansi Khatri</h3>
+      <p class="role">Front-end developer</p>
+      <p>Contact us : 6354925458<br>mansikkhatri8@gmail.com</p>
+    </div>
+    
+
+  </div>
+</div>  
+
+  </section>
+
+  <footer class="footer text-faded text-center py-5 clearfix">
+    <div class="container">
+      <p class="m-0 small">Copyright &copy; Your Website 2020</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
