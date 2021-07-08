@@ -10,7 +10,7 @@ OpenCV already contains the pre-trained classifiers for a face like lips, eye, n
 2.	Emotion Detection — Classifying the emotion on the face as happy, angry, sad, neutral, surprise, disgust or fear
 #
 Database: IndexDb
-1	It will store data inside a user's browser. Because it lets you create web applications with rich query abilities regardless of network availability.
-2	your applications can work both online and offline.
-3	IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. 
-4	This API uses indexes to enable high-performance searches of this data. it is less useful for storing larger amounts of structured data.
+1.	It will store data inside a user's browser. Because it lets you create web applications with rich query abilities regardless of network availability.
+2.	your applications can work both online and offline.
+3.	IndexedDB is a low-level API for client-side storage of significant amounts of structured data, including files/blobs. 
+4.	This API uses indexes to enable high-performance searches of this data. it is less useful for storing larger amounts of structured data.
